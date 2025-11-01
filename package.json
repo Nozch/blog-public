@@ -1,0 +1,29 @@
+{
+  "name": "blog-public",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodex scripts/build-mdx-index.mjs && next dev --webpack",
+    "prebuild": "node scripts/build-mdx-index.mjs",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "next": "16.0.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@next/mdx": "^16.0.1",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.1",
+    "globby": "^15.0.0",
+    "gray-matter": "^4.0.3",
+    "typescript": "^5"
+  }
+}
