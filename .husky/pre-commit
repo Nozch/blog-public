@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -e
+echo "[pre-commit] build check..."
+npm run -s prebuild
+npm run -s build

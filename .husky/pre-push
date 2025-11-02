@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -e
+echo "[pre-push] clean build..."
+rm -rf node_modules .next
+npm ci
+npm run -s build
