@@ -1,10 +1,14 @@
 name: Validate content
 on:
   pull_request:
-    paths: ["content/posts/**"]
+    paths: ["content/posts/**", "scripts/validate-frontmatter.mjs"]
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: npm ci
       - run: node scripts/validate-frontmatter.mjs
